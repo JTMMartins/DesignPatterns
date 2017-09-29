@@ -40,7 +40,12 @@ objectos, para que seja possivel verificar que a instancia do objecto
 
 ##### Dois objectos com o mesmo HashCode referem-se ao mesmo objecto.
 
-NOTAS : Em aplicacões multithread, um singleton baseado na implementacão
+NOTAS :
+
+1. Em aplicacões multithread, um singleton baseado na implementacão
 *Eager* é seguro, no entanto se pretendermos recorrer à implementacão
 *Lazy* deveremos sincronizar o método que fornece a instancia.
 
+2. Os enum em Java são por naturea Singletons, e estão disponíveis para acesso
+global. O ponto negativo é que não suportam instanciacão *lazy* e o ponto positivo
+é que são thread-safe.

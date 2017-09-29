@@ -1,6 +1,6 @@
 ### Singleton
 
-Inlcui-se nos padrões de desenvolvimento creacionais *(Creational Patterns)*
+Inclui-se nos padrões de desenvolvimento creacionais *(Creational Patterns)*
 
 Por vezes é importante que uma classe seja instanciada uma única vez
 durante todo o ciclo de vida de uma aplicacao.

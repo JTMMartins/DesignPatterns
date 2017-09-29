@@ -49,3 +49,7 @@ NOTAS :
 2. Os enum em Java são por naturea Singletons, e estão disponíveis para acesso
 global. O ponto negativo é que não suportam instanciacão *lazy* e o ponto positivo
 é que são thread-safe.
+
+##### Representacão UML
+
+![uml-singleton](Singleton.png)

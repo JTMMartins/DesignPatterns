@@ -8,7 +8,7 @@ durante todo o ciclo de vida de uma aplicacao.
 Devemos ser parcos na utilizacao dos *Singletons*, no entanto, estes podem
 ser extremamente uteis quando nos deparamos com situacoes cuja instanciacao
 de um objecto pode ter elevados custos de tempo e / ou memória. Nestes casos,
-o ideal será criar apenas um objecto e utiliza-lo sempre que necessário.
+o ideal será criar apenas um objecto e reutiliza-lo sempre que necessário.
 (por ex. criar ligacoes a bases de dados)
 
 Os dois aspectos principais de um *Singleton* são :

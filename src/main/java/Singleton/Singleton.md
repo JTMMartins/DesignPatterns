@@ -1,0 +1,46 @@
+### Singleton
+
+Inlcui-se nos padrões de desenvolvimento creacionais *(Creational Patterns)*
+
+Por vezes é importante que uma classe seja instanciada uma única vez
+durante todo o ciclo de vida de uma aplicacao.
+
+Devemos ser parcos na utilizacao dos *Singletons*, no entanto, estes podem
+ser extremamente uteis quando nos deparamos com situacoes cuja instanciacao
+de um objecto pode ter elevados custos de tempo e / ou memória. Nestes casos,
+o ideal será criar apenas um objecto e utiliza-lo sempre que necessário.
+(por ex. criar ligacoes a bases de dados)
+
+Os dois aspectos principais de um *Singleton* são :
+
+
+1. Deve garantir-se a existência de **uma e apenas uma** instância da classe.
+2. Devemos possibilitar um acesso global a essa instancia.
+
+Existem duas formas de instanciar os *Singletons* :
+
+1. Instanciacão *Lazy* (perguicosa).
+2. Instanciacao *Eager* (ansiosa).
+
+Sempre que isso nos for possivel devemos preferir os métodos *Lazy*
+
+Qual a diferenca entre os dois métodos ?
+
+No modelo de instanciacao Eager, a instancia do *Singleton* é criada
+assim que a JVM efectua o *ClassLoad* da mesma. Ou seja, mesmo que
+ainda não necessitemos de utilizar o Singleton, os recursos que ele
+eventualmente necessite, já estão a ser consumidos.
+
+Já no modo de instanciacao *Lazy* os recursos vão ser consumidos apenas
+no primeiro momento em que efectivamente solicitamos a instancia.
+
+Nestes nossos exemplos, e para simplificar, recorremos ao *HashCode* dos
+objectos, para que seja possivel verificar que a instancia do objecto
+é sempre a mesma.
+
+##### Dois objectos com o mesmo HashCode referem-se ao mesmo objecto.
+
+NOTAS : Em aplicacões multithread, um singleton baseado na implementacão
+*Eager* é seguro, no entanto se pretendermos recorrer à implementacão
+*Lazy* deveremos sincronizar o método que fornece a instancia.
+

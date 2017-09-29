@@ -8,7 +8,7 @@ public class App {
     public static void main(String[] args) {
 
         /**
-         * solicitamos uma instancia do nosso LazySingleton e atribuimos a firstLazySingleton
+         * solicitamos uma instancia do nosso enumEagerSingleton e atribuimos a firstEnumSingleton
          */
         EnumEagerSingleton firstEnumSingleton = EnumEagerSingleton.INSTANCE;
 
@@ -29,7 +29,7 @@ public class App {
 
 
         /**
-         * solicitamos uma instancia do nosso LazySingleton e atribuimos a secondLazySingleton
+         * solicitamos uma instancia do nosso enumEagerSingleton  e atribuimos a secondEnumSingleton
          */
         EnumEagerSingleton secondEnumSingleton = EnumEagerSingleton.INSTANCE;
 

@@ -1,3 +1,5 @@
+### Factory
+
 Inclui-se nos padrões de desenvolvimento creacionais *(Creational Patterns)*
 
 O padrão *Factory* é muito útil quando necessitamos de criar um objecto, mas à partida

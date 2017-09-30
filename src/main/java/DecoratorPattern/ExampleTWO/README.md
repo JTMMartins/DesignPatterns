@@ -1,3 +1,5 @@
+### Decorator exemplo 2
+
 Este exemplo tem como objectivo mostrar como podemos alterar o comportamento de um objecto
 durante o run time de uma aplicacão.
 

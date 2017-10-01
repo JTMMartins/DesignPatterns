@@ -9,10 +9,10 @@ qualquer que apenas saberemos na hora.
 Uma *factory* apresenta várias vantagens
 
 1. Permite-nos esconder a lógica de criacão dos objectos dos clientes.
-2. Removemos toda a lôgica de implementacao do cliente, tornando o código
+2. Removemos toda a lógica de implementacao do cliente, tornando o código
 menos acopolado e mas fácil de manter.
 3. Podemos alterar completamente a lógica de um objecto sem necessitar
-de alterar código no cliente).
+de alterar código no cliente.
 4. Criamos uma abstracao entre a implementacão e o cliente através da utilizacão de
 herditariedade.
 5. Programamos em funcão de um Interface.

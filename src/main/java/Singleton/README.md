@@ -53,6 +53,7 @@ global. O ponto negativo é que não suportam instanciacão *lazy* e o ponto pos
 ##### Representacão UML
 
 ![uml-singleton](Singleton.png)
+
 (modelos UML criados com Modelio - https://www.modelio.org/)
 
 ## NOTA SOBRE OS TESTES

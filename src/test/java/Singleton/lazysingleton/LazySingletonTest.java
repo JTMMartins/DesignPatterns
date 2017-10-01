@@ -77,15 +77,16 @@ final class Test1 implements Runnable {
     @Override
     public void run() {
         thisHashCode = 0;
-        /* cria algumas instancias e testa. */
         LazySingleton lazySingleton = LazySingleton.getInstance();
+
         if (lastHascode == null) {
-            lastHascode = lazySingleton.hashCode();
+            lastHascode = EagerSingleton.getInstance().hashCode();
         }
         thisHashCode = lazySingleton.hashCode();
         //System.out.println("LAST : "+ lastHascode + " This : " + thisHashCode);
+        //test previous HashCode with actualHashcode
         assertEquals(thisHashCode, lastHascode);
         lastHascode = thisHashCode;
+
     }
 }
-

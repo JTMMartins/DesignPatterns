@@ -1,46 +1,50 @@
-package Singleton.eagersingleton;
+package Singleton.lazysingleton;
 
-import Singleton.lazysingleton.LazySingleton;
+import Singleton.eagersingleton.EagerSingleton;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.function.Supplier;
 
 import static org.junit.Assert.*;
 
-public class EagerSingletonTest {
-
+public class LazySingletonTest {
 
     /**
-     * Testa que o Singleton é sempre o mesmo objecto
+     * TESTAR QUE O SINGLETON É SEMPRE O MESMO OBJECTO (SINGLE THREAD)
      */
     @Test
     public void testMultipleInstantiationReturnTheSameObject() throws Exception {
         /* create 4 instances of singleton */
-        EagerSingleton es1 = EagerSingleton.getInstance();
-        EagerSingleton es2 = EagerSingleton.getInstance();
-        EagerSingleton es3 = EagerSingleton.getInstance();
-        EagerSingleton es4 = EagerSingleton.getInstance();
+        LazySingleton ls1 = LazySingleton.getInstance();
+        LazySingleton ls2 = LazySingleton.getInstance();
+        LazySingleton ls3 = LazySingleton.getInstance();
+        LazySingleton ls4 = LazySingleton.getInstance();
         /* check they are the same */
-        assertSame(es1, es2);
-        assertSame(es2, es3);
-        assertSame(es3, es4);
+        assertSame(ls1, ls2);
+        assertSame(ls2, ls3);
+        assertSame(ls3, ls4);
     }
 
 
     /**
      * MULTITHREAD - verificar que a instancia é sempre a mesma
-     * ESTE.
-     * COMO POR VEZES É DIFICIL DE DETECTAR PROBLEMAS EM AMBIENTE
-     * MULTITHREAD CORREMOS 900 MIL VEZES.
+     * ESTE TESTE VAI OCASIONALMENTE FALHAR.
+     * ESSE COMPORTAMENTO É MAIS FÁCILMENTE DETECTADO SE
+     * COMENTARMOS A LINHA 75 (PRINT).
+     * PRESUMO QUE AO RETIRARMOS O PRINT, UMA VEZ QUE O
+     * SISTEMA É IMEDIATAMENTE MAIS RÁPIDO, A CHANCE DE
+     * OCORREREM CONCORRENCIA DE THREADS AUMENTA, LOGO
+     * POR VEZES A INSTANCIA NÃO É A MESMA.
+     * ISTO DEMONSTRA QUE A INSTANCIACÃO LAZY NÃO É
+     * THREAD SAFE.
+     * <p>
+     * Estas situacões são dificeis de detectar, sendo
+     * por isso que se cria uma lista com 900 mil testers
+     * e mesmo assim por vezes o teste passa.
      */
     @Test
-    public void testMultithreadEagerSingletonInstantiation() {
+    public void testMultithreadLazySingletonInstantiation() {
 
         /* Prepara uma lista de Testers */
         List<Test1> testers = new ArrayList<>();
@@ -73,17 +77,15 @@ final class Test1 implements Runnable {
     @Override
     public void run() {
         thisHashCode = 0;
-        EagerSingleton eagerSingleton = EagerSingleton.getInstance();
-
+        /* cria algumas instancias e testa. */
+        LazySingleton lazySingleton = LazySingleton.getInstance();
         if (lastHascode == null) {
-            lastHascode = EagerSingleton.getInstance().hashCode();
+            lastHascode = lazySingleton.hashCode();
         }
-        thisHashCode = eagerSingleton.hashCode();
+        thisHashCode = lazySingleton.hashCode();
         //System.out.println("LAST : "+ lastHascode + " This : " + thisHashCode);
-        //test previous HashCode with actualHashcode
         assertEquals(thisHashCode, lastHascode);
         lastHascode = thisHashCode;
     }
-
-
 }
+

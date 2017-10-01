@@ -53,3 +53,16 @@ global. O ponto negativo é que não suportam instanciacão *lazy* e o ponto pos
 ##### Representacão UML
 
 ![uml-singleton](Singleton.png)
+(modelos UML criados com Modelio - https://www.modelio.org/)
+
+## NOTA SOBRE OS TESTES
+
+No testes para o LazySingleton, irão ocorrer falhas no teste
+*testMultithreadLazySingletonInstantiation*
+que nos demonstram que a instanciacão lazy em ambientes multithreaded
+não é segura.
+
+Pode no entanto acontecer, que ocasionalmente os testes passem.
+
+Por essa razão utilizamos valores elevadissimos (900 mil) para lancar
+threads.

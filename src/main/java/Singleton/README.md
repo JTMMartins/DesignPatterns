@@ -5,7 +5,7 @@ Inclui-se nos padrões de desenvolvimento creacionais *(Creational Patterns)*
 Por vezes é importante que uma classe seja instanciada uma única vez
 durante todo o ciclo de vida de uma aplicacao.
 
-Devemos ser parcos na utilizacao dos *Singletons*, no entanto, estes podem
+As boas práticas dizem-nos que devemos ser parcos na utilizacao dos *Singletons*, no entanto, estes podem
 ser extremamente uteis quando nos deparamos com situacoes cuja instanciacao
 de um objecto pode ter elevados custos de tempo e / ou memória. Nestes casos,
 o ideal será criar apenas um objecto e reutiliza-lo sempre que necessário.
@@ -15,7 +15,7 @@ Os dois aspectos principais de um *Singleton* são :
 
 
 1. Deve garantir-se a existência de **uma e apenas uma** instância da classe.
-2. Devemos possibilitar um acesso global a essa instancia.
+2. Deve possibilitar um acesso global a essa instancia.
 
 Existem duas formas de instanciar os *Singletons* :
 

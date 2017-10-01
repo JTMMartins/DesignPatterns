@@ -18,15 +18,14 @@ Neste exemplo, a encriptacao simples é representada por uma simples inversão d
 e a encriptacão mais complexa é representada por uma codificacão em Base64. Estas codificacões estão
 implementadas na classe Enigma.
 
-Como vamos ver, gracas à utilizacão do padrão *Decorator* podemos utilizar combinacões e permutacões de
+Gracas à utilizacão do padrão *Decorator* podemos utilizar combinacões e permutacões de
 funcionalidades de forma simples.
 
 Podemos enviar as mensagens de forma descodificada, podemos enviar as mensagens invertidas, codificadas
 ou até codificadas e invertidas. E se necessitarmos de implementar mais funcionalidades, podemos adicionar
 novos *decorators*
 
-Se imaginar criar estas funcionalidades sem recorrer à composicão e à herditariedade, e tudo se tornará bem
-mais complicado de gerir.
+Criar estas funcionalidades sem recorrer à composicão e à herditariedade, parece-me bem mais complicado de gerir.
 
 ##### Representacão UML deste exemplo
 

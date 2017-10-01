@@ -17,14 +17,15 @@ de alterar código no cliente).
 herditariedade.
 5. Programamos em funcão de um Interface.
 
-Imaginemos uma loja de reparacoes, cujo sistem deve enviar uma mensagem aos seus
+Imaginemos uma loja de reparacões, cujo sistem deve enviar uma mensagem aos seus
 clientes sempre que um equipamento está reparado e pronto para ser recolhido.
 
 No entanto, alguns clientes querem receber essa mensagem por SMS, outros pretendem
 receber por Email e outros pretendem receber por fax.
 
-Podemos claro encher a classe de cliente com Ifs e criar código para o envio de
+Podemos claro encher uma classe com Ifs e criar código para o envio de
 cada tipo de mensagem. É uma solucão.
+
 Agora vamos imaginar que queremos criar uma funcionalidade que faz a mesma coisa,
 mas para informar clientes que tem facturas em atraso...Vamos repetir tudo novamente ?
 Funciona...
@@ -33,15 +34,15 @@ Mas e se criarmos uma fábrica de mensagens reutilizável ?
 A primeira coisa que repararmos, é que existe um elemento comum a todas as comunicacoes
 que precisamos de implementar..Então podemos agrupa-las de alguma forma como sendo do
 tipo Mensagens. Podemos utilizar um Interface para isso.
-E isso já nos vai facilitar muita coisa como podemos verificar no exemplo que se disponibiliza.
+E isso já nos vai facilitar muita coisa como podemos verificar no exemplo.
 
 Um Interface Message, uma classe para cada tipo de mensagem, e uma fábrica que vai
 criar e devolver um objecto do tipo apropriado, de acordo com o que lhe for solicitado.
 
 Também se pode utilizar classes abstratas, mas para manter o exemplo o mais simples
-possivel, iremos utilizar apenas um interface com um método que trata de enviar mensagens.
+possivel, utilizei apenas um interface com um método que trata de enviar mensagens.
 
-##### Representacão UML do nosso exemplo
+##### Representacão UML do exemplo
 
 ![uml-FactoryPattern](FactoryPattern.png)
 

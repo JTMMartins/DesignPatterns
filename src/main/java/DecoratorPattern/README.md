@@ -57,7 +57,7 @@ Este processo, tem na realidade uma inifidade de aplicacões, que normalmente n�
 Para este pattern vamos encontrar 2 exemplos (nas pastas ExampleONE e ExampleTWO). O primeiro exemplo é o que se
 encontra normalmente em livros sobre este tema, no entanto parece-me um bocado limitado, pois não estamos a alterar
 nenhum comportamento, e estamos apenas a fazer um pequeno cálculo através da leitura de uma propriedade. Já o segundo
-exemplo, mostra claramente uma funcionalidade mais útil e mais parecida com algo que possa ser necessário na vida
+exemplo, tenta representar uma funcionalidade mais útil e mais parecida com algo que possa ser necessário na vida
 real e que demonstra como podemos adicionar e combinar funcionalidades em caso de necessidade.
 
 

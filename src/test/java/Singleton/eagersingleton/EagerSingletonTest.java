@@ -44,7 +44,7 @@ public class EagerSingletonTest {
 
         /* Prepara uma lista de Testers */
         List<Test1> testers = new ArrayList<>();
-        for (int i = 0; i < 900000; i++) {
+        for (int i = 0; i < 10000; i++) {
             testers.add(new Test1());
         }
 

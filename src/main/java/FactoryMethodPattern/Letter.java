@@ -12,6 +12,7 @@ public class Letter extends Message {
 
     private String letterHeaderMessage;
     private String letterSignature;
+    private String stamp;
 
 
     @Override
@@ -35,6 +36,5 @@ public class Letter extends Message {
         System.out.println(finalMessage);
 
     }
-
 
 }

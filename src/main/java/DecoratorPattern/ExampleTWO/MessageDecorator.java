@@ -21,7 +21,9 @@ public abstract class MessageDecorator implements Message {
     }
 
     /**
-     * Não precisamos de corpo para o método.
+     * Não precisamos de corpo para o método, pois neste
+     * exemplo cada decorador implementará a sua própria
+     * versão.
      */
     public abstract void sendMessage(String message);
 

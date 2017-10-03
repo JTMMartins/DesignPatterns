@@ -35,4 +35,6 @@ public class Letter extends Message {
         System.out.println(finalMessage);
 
     }
+
+
 }

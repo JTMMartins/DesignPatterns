@@ -24,6 +24,7 @@ public class App {
 
         MessageFactory factory1 = new WrittenMessageFactory();
         Message message4 = factory1.construct("Este é o corpo da nossa carta", MessageType.Letter);
+
     }
 
 

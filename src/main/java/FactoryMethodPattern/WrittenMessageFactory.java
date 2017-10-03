@@ -18,6 +18,7 @@ public class WrittenMessageFactory extends MessageFactory {
 
                 message = new FAX();
                 message.setMessageBody(messageToSend);
+
                 break;
 
             case Letter:

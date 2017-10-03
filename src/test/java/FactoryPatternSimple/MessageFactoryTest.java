@@ -12,7 +12,7 @@ public class MessageFactoryTest {
      * ao tipo solicitado.
      */
     @Test
-    public void createEmailMessage() {
+    public void createMessage() {
 
         Message emailMessage = new MessageFactory().construct(MessageType.EmailMessage);
         verifyMessage(emailMessage, Email.class);

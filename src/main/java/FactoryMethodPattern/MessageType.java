@@ -1,7 +1,8 @@
-package FactoryPattern;
+package FactoryMethodPattern;
 
 public enum MessageType {
     FaxMessage,
     SMSMessage,
-    EmailMessage
+    EmailMessage,
+    Letter
 }

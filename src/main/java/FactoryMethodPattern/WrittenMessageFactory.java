@@ -1,7 +1,7 @@
 package FactoryMethodPattern;
 
 
-/**
+/*
  * Esta é uma classe especializada que apenas consegue enviar
  * mensagens do tipo escrito em papel (FAX e Cartas)
  */
@@ -15,13 +15,16 @@ public class WrittenMessageFactory extends MessageFactory {
         switch (type) {
 
             case FaxMessage:
+
                 message = new FAX();
                 message.setMessageBody(messageToSend);
+                break;
 
             case Letter:
+
                 message = new Letter();
                 message.setMessageBody(messageToSend);
-
+                break;
         }
 
         return message;

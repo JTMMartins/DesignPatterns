@@ -1,7 +1,7 @@
 package FactoryMethodPattern;
 
 
-/**
+/*
  * Classe abstracta que vai definir quais os métodos que as classes
  * "filhas" terão de implementar.
  */

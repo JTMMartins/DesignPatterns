@@ -1,6 +1,6 @@
 package FactoryMethodPattern;
 
-/**
+/*
  * extende a classe abstracta Message.
  * Uma vez que extende uma classe abstracta com métodos
  * abstractos terá de implementar as funcionalidades para todos os métodos

@@ -1,6 +1,6 @@
 package FactoryMethodPattern;
 
-/**
+/*
  * extende a classe abstracta Message.
  * Uma vez que extende uma classe abstracta com mëtodos
  * abstractos terá de implementar as funcionalidades para todos os métodos
@@ -15,7 +15,7 @@ public class SMS extends Message {
 
     @Override
     public void prepareHeader() {
-        smsHeaderMessage = "Cabecalho usado em SMS";
+        smsHeaderMessage = "Este é o Cabecalho usado em SMS";
 
 
     }

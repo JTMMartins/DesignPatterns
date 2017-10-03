@@ -1,6 +1,6 @@
 package FactoryMethodPattern;
 
-/**
+/*
  * extende a classe abstracta Message.
  * Uma vez que extende uma classe abstracta com métodos
  * abstractos terá de implementar as funcionalidades para todos os métodos
@@ -16,7 +16,7 @@ public class FAX extends Message {
     @Override
     public void prepareHeader() {
 
-        faxHeaderMessage = " Este é o cabecalho usado em emails";
+        faxHeaderMessage = " Este é o cabecalho usado em Faxes";
     }
 
     @Override

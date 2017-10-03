@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class MessageFactoryTest {
 
-    /**
+    /*
      * Criamos 3 mensagens (1 de cada tipo) e enviamos a mensagem
      * para verifyMessage que irá confirmar que a mensagem corresponde
      * ao tipo solicitado.
@@ -25,7 +25,7 @@ public class MessageFactoryTest {
 
     }
 
-    /**
+    /*
      * método que verifica se uma classe é do tipo pretendido
      */
     private void verifyMessage(Message message, Class<?> clazz) {

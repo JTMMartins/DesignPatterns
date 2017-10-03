@@ -1,7 +1,7 @@
 package FactoryMethodPattern;
 
 
-/**
+/*
  * Aqui a factory vai definir o tipo de operacoes comum a todas as
  * mensagens.
  * NOTA : é definido um método abstracto constructMessage que terá de ser

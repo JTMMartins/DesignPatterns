@@ -1,27 +1,29 @@
 package DecoratorPattern.ExampleONE;
 
-public class AdultChanelAddOn extends CableTVDecorator {
+public class AdultChanelAddOn extends CableTVSubscriptionDecorator {
 
     double adultChannelPrice = 19.90;
 
-    public AdultChanelAddOn(CableTV specialCableTV) {
+    public AdultChanelAddOn(CableTVSubscription specialCableTVSubscription) {
 
-        super(specialCableTV);
+        super(specialCableTVSubscription);
     }
 
     @Override
     public String getChannelName() {
 
-        return cableTVPack.getChannelName() + addAdultChannel();
+        return cableTVSubscriptionPack.getChannelName() + addAdultChannel();
     }
 
     private String addAdultChannel() {
+
         return " + Adulto";
     }
 
     @Override
     public double getSubscriptionPrice() {
-        return adultChannelPrice + cableTVPack.getSubscriptionPrice();
+
+        return adultChannelPrice + cableTVSubscriptionPack.getSubscriptionPrice();
     }
 
 

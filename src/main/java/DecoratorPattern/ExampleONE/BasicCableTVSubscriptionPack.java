@@ -4,7 +4,7 @@ package DecoratorPattern.ExampleONE;
  * A implementacao mais básica do interface, neste caso irá ser o nosso
  * produto base ao qual serão adicionados os Addons.
  */
-public class BasicCableTV implements CableTV {
+public class BasicCableTVSubscriptionPack implements CableTVSubscription {
 
     private double basicTVSubscription = 24.99;
 

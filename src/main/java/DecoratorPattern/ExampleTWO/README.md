@@ -25,7 +25,7 @@ Podemos enviar as mensagens de forma descodificada, podemos enviar as mensagens 
 ou até codificadas e invertidas. E se necessitarmos de implementar mais funcionalidades, podemos adicionar
 novos *decorators*
 
-Criar estas funcionalidades sem recorrer à composicão e à herditariedade, parece-me bem mais complicado de gerir.
+
 
 ##### Representacão UML deste exemplo
 

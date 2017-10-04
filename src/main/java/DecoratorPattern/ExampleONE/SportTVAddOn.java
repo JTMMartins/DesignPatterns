@@ -1,18 +1,18 @@
 package DecoratorPattern.ExampleONE;
 
-public class SportTVAddOn extends CableTVDecorator {
+public class SportTVAddOn extends CableTVSubscriptionDecorator {
 
-    private double sportTVPrice = 17.35;
+    private double sportTVPrice = 19.99;
 
-    public SportTVAddOn(CableTV cableTVPack) {
+    public SportTVAddOn(CableTVSubscription cableTVSubscriptionPack) {
 
-        super(cableTVPack);
+        super(cableTVSubscriptionPack);
     }
 
     @Override
     public String getChannelName() {
 
-        return cableTVPack.getChannelName() + addSportTV();
+        return cableTVSubscriptionPack.getChannelName() + addSportTV();
     }
 
     private String addSportTV() {
@@ -22,7 +22,8 @@ public class SportTVAddOn extends CableTVDecorator {
 
     @Override
     public double getSubscriptionPrice() {
-        return sportTVPrice + cableTVPack.getSubscriptionPrice();
+
+        return sportTVPrice + cableTVSubscriptionPack.getSubscriptionPrice();
     }
 
 

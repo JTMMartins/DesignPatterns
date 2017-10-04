@@ -1,27 +1,29 @@
 package DecoratorPattern.ExampleONE;
 
-public class FoxMoviesAddOn extends CableTVDecorator {
+public class FoxMoviesAddOn extends CableTVSubscriptionDecorator {
 
     private double foxMoviesPrice = 9.99;
 
-    public FoxMoviesAddOn(CableTV specialCableTV) {
+    public FoxMoviesAddOn(CableTVSubscription specialCableTVSubscription) {
 
-        super(specialCableTV);
+        super(specialCableTVSubscription);
     }
 
     @Override
     public String getChannelName() {
 
-        return cableTVPack.getChannelName() + addFoxMovies();
+        return cableTVSubscriptionPack.getChannelName() + addFoxMovies();
     }
 
     private String addFoxMovies() {
+
         return " + FoxMovies";
     }
 
     @Override
     public double getSubscriptionPrice() {
-        return foxMoviesPrice + cableTVPack.getSubscriptionPrice();
+
+        return foxMoviesPrice + cableTVSubscriptionPack.getSubscriptionPrice();
     }
 
 }

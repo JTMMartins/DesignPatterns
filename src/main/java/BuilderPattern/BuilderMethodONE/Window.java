@@ -13,8 +13,8 @@ public class Window {
 
 
     public static final class WindowBuilder {
-        private int topCornerX;
-        private int topCornerY;
+        private int topCornerX; // Se nada for indicado o valor padrão será Zero.
+        private int topCornerY; // Se nada for indicado o valor padrão será Zero.
         private int windowWidth = 300; // se nada for enviado ao builder este vai ser o valor padrão.
         private int windowHeight = 300; // se nada for enviado ao builder este vai ser o valor padrão.
         private int fillRedValue = 255; // se nada for enviado ao builder este vai ser o valor padrão.

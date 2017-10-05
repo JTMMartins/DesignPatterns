@@ -1,4 +1,4 @@
-package BuilderPattern.BuilderMethodONE;
+package BuilderPattern;
 
 public class App {
 

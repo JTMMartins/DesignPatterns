@@ -1,4 +1,4 @@
-package BuilderPattern.BuilderMethodONE;
+package BuilderPattern;
 
 public class Window {
 
@@ -12,6 +12,7 @@ public class Window {
     private final String windowTitle;
 
 
+    /* Class interna */
     public static final class WindowBuilder {
         private int topCornerX; // Se nada for indicado o valor padrão será Zero.
         private int topCornerY; // Se nada for indicado o valor padrão será Zero.
@@ -102,6 +103,12 @@ public class Window {
         }
 
         public Window build() {
+            /*
+            * NOTA :
+            * CASO PRETENDAMOS VERIFICAR A CONSISTENCIA DO OBJECTO
+            * (VERIFICAR SE TODOS OS ATRIBUTOS SÃO VÁLIDOS
+            * DEVEMOS FAZE-LO A PARTIR DO OBJECTO CONSTRUIDO)
+             */
             return new Window(this);
         }
 
@@ -109,9 +116,11 @@ public class Window {
          * verifies if a value is out of accepted range
          */
         private boolean isWithinRange(int value, int min, int max) {
+
             return (value < min || value > max);
         }
-    }
+
+    }//fim da class interna
 
     public Window(WindowBuilder builder) {
         this.topCornerX = builder.topCornerX;

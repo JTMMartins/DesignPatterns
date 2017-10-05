@@ -37,7 +37,7 @@ Para definir a janela, necessitamos de informar :
 * Título da Janela.
 * Côr de fundo para preenchimento da janela.
 
-Se criarmos um construtor que receba esses parametros iremos obter algo do tipo :
+Se enveredarmos pela estratégia normal de criar um construtor que receba esses parametros iremos ficar  algo do tipo :
 
 `Window window = new Window (100,100,200,300,"Clientes",35,127,32)`
 

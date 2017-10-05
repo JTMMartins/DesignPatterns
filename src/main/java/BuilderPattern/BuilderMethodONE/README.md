@@ -48,7 +48,7 @@ provavelmente terá de anotar num papel, o que significam os parametros para nã
 Setters ajudariam...Mas será que não existe uma forma melhor ?
 
 É ai que vai entrar o builder que nos permitirá criar o objecto passo a passo, valida-lo e devolve-lo já criado
-num estado consistente ficando no nosso código muito mais compreensivel
+num estado consistente ficando no nosso código muito mais compreensivel e fluente.
 
         `Window formWindow3= new Window.WindowBuilder()
                             .withLeftTopcornerPositionX(100)

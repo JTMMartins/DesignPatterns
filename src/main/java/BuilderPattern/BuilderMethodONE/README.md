@@ -12,7 +12,7 @@ Para criarmos este tipo de *builder*
 
 1. Criamos a classe que representa o nosso objecto, com todos os atributos que o mesmo necessita.
 
-2. Criamos uma classe interior (*static*) e copiamos todos os campos da classe exterior para essa classe *builder*. A
+2. Criamos uma classe interior (*static*) e copiamos todos os atributos da classe exterior para essa classe *builder*. A
 convencão que normalmente se utiliza no nome a utilizar na classe interior é adicionar o sufixo 'builder' ao nome da classe
 exterior. Assim se a classe exterior se chamar "Radio" a classe interior deverá chamar-se RadioBuilder. (isto é apenas uma
 convencão e não uma obrigatoriedade)

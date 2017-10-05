@@ -27,14 +27,38 @@ objecto.
 
 Este exemplo é bastante simples.
 
-Imaginemos que temos uma loja de bolos que atende pedidos ao balcão e a receita do bolo pretendido pelo cliente sai
-numa impressora na cozinha.
+Imaginemos que pretendemos criar uma janela no ecrã. Para definirmos essa janela usamos uma classe Window.
+Para definir a janela, necessitamos de informar :
 
-Para ser simples nossa loja só vende 2 tipos de bolos...Bolo de Cereja e Bolo de Morango, mas podemos com facilidade
-adicionar novos bolos mantendo o mesmo processo de construcão do objecto bolo.
+* Coordenada X do canto superior esquerdo.
+* Coordenada Y do canto superior esquerdo.
+* Comprimento da Janela.
+* Altura da Janela.
+* Título da Janela.
+* Côr de preenchimento da janela.
 
-Por este método ser tão simples e apenas com uma classe (embora contenha uma classe interna) não criamos nenhuma
-representacão UML.
+Se criarmos um construtor que receba esses parametros iremos obter algo do tipo :
+
+`Window window = new Window (100,100,200,300,35,127,32)`
+
+Quem olhar para esse código ficará sem saber o que significam todos aqueles números, e como tal terá de consultar
+a documentacão ou ir verificar o código da classe window. Se necessitar de criar várias janelas ao longo da aplicacão
+provavelmente terá de anotar num papel, o que significam os parametros para não se enganar.
+
+Setters ajudariam...Mas será que não existe uma forma melhor ?
+
+É ai que vai entrar o builder que nos permitirá criar o objecto passo a passo, valida-lo e devolve-lo já criado
+num estado consistente ficando no nosso código muito mais compreensivel
+
+        `Window formWindow3= new Window.WindowBuilder()
+                            .withLeftTopcornerPositionX(100)
+                            .withLeftTopCornerPositionY(100)
+                            .withHeight(300)
+                            .withWidth(600)
+                            .fillWithRGB(125,180,28)
+                            .withTitle("Janela Numero 3")
+                            .build();`
+
 
 
 

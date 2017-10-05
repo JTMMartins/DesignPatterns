@@ -39,7 +39,7 @@ Para definir a janela, necessitamos de informar :
 
 Se criarmos um construtor que receba esses parametros iremos obter algo do tipo :
 
-`Window window = new Window (100,100,200,300,35,127,32)`
+`Window window = new Window (100,100,200,300,"Clientes",35,127,32)`
 
 Quem olhar para esse código ficará sem saber o que significam todos aqueles números, e como tal terá de consultar
 a documentacão ou ir verificar o código da classe window. Se necessitar de criar várias janelas ao longo da aplicacão

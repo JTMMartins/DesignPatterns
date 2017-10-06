@@ -21,7 +21,7 @@ Esse é o principal problema que o padrão *prototype* pretende resolver. Após 
 trabalhamos apenas com clones desse objecto. Sempre que o objecto "original" for necessário, só necessitaremos de solicitar
 uma nova cópia (clone).
 
-Em resumo, Após termos um objecto, trabalhamos e manipulamos apenas cópias desse mesmo objecto e nunca alteramos o
+Em resumo, após termos um objecto, trabalhamos e manipulamos apenas cópias desse mesmo objecto e nunca alteramos o
 objecto inicial.
 
 Um dos requisitos indicados nas boas práticas, é que o objecto inicial disponibilize ele próprio um método para clonagem,
@@ -46,7 +46,7 @@ nova pessoa, mas o objecto filiacão continua a ser o mesmo. Alterar o objecto a
 também o objecto afiliacão na pessoa original.
 
 Numa cópia profunda (*deep copy*), iremos obter uma cópia de toda a estrutura do objecto, totalmente independente do objecto original,
-e alterar o objecto morada no clone de pessoa não irá afectar o objecto morada em pessoa original.
+e alterar o objecto filiacão no clone de pessoa não irá afectar o objecto filiacão em pessoa original.
 
 Por defeito, quando utilizamos o interface Cloneable da API JAVA, o método de clonagem será superficial (*shallow copy*).
 Caso necessitemos de efectuar uma cópia profunda (deep copy) deveremos utilizar uma implementacão ligeiramente diferente, que depende

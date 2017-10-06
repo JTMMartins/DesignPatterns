@@ -166,4 +166,8 @@ public class Window {
     public int getFillBlueValue() {
         return fillBlueValue;
     }
+
+    public String getWindowTitle() {
+        return windowTitle;
+    }
 }

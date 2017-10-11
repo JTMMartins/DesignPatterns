@@ -1,6 +1,8 @@
 package CompositePattern.CompositeTwo;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 public class Subordinate implements Employee {
     private final String name;
@@ -29,9 +31,15 @@ public class Subordinate implements Employee {
 
     @Override
     public Employee findByName(String name) {
-        //sendo um nó terminal não se aplica nesta classe
-        return null;
+        System.out.println("in subordinate : " + this.getName());
+        return this;
     }
+
+    @Override
+    public Employee findByName2(String name) {
+        return this;
+    }
+
 
     @Override
     public String getDept() {

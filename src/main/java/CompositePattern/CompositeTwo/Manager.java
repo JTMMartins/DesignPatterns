@@ -3,11 +3,13 @@ package CompositePattern.CompositeTwo;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
 
 public class Manager implements Employee {
     private final String name;
     private final String dept;
-    private List<Employee> subordinates = new ArrayList<>();
+    private List<Employee> subordinates;
 
     public Manager(String name, String dept) {
         this.name = name;
@@ -35,16 +37,44 @@ public class Manager implements Employee {
         return this.dept;
     }
 
+
+    //THIS WORKS BUT IS VERY BAD CODE
+    //WE DONT WANT THIS.
     @Override
     public Employee findByName(String name) {
-        Employee response = null;
-        Iterator<Employee> iterator = subordinates.iterator();
-        while (iterator.hasNext()) {
-            response = iterator.next();
+        if (this.getName().equals(name)) return this;
+        Employee found = null;
+
+        Iterator<Employee> employeeIterator = subordinates.iterator();
+
+        while (employeeIterator.hasNext()) {
+            Employee response = employeeIterator.next();
             if (response.getName().equals(name)) {
-                return response;
+                found = response;
+            } else {
+                for (Employee employee : response.getSubordinates()) {
+                    if (employee.getName().equals(name)) {
+                        found = employee;
+                        break;
+                    }
+                }
             }
         }
-        return response.findByName(name);
+
+        return found;
     }
+
+    @Override
+    public Employee findByName2(String name) {
+        for (Employee sub : subordinates) {
+            System.out.println(sub.getName());
+            while (!sub.getName().equals(name)) {
+                return sub.findByName2(name);
+            }
+        }
+        return null;
+    }
+
+
 }
+

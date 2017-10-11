@@ -1,7 +1,9 @@
 package CompositePattern.CompositeTwo;
 
 public class App {
+
     public static void main(String[] args) {
+
         Employee CEO = new Manager("Jose", "CEO");
 
         Employee headMarketing = new Manager("Alberto", "Marketing");
@@ -23,9 +25,8 @@ public class App {
         CEO.add(headMarketing);
         CEO.add(headSales);
 
-        Employee lookingfor = CEO.findByName("Pedro");
+        Employee lookingfor = CEO.findByName("Pedro");//O funcionário que estamos à procura.
         System.out.println("O funcionário " + lookingfor.getName() + " trabalha no dept " + lookingfor.getDept());
-
     }
 
 }

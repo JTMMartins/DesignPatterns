@@ -24,9 +24,16 @@ Quando queremos construir este tipo de objectos, o padrão composite propõe-se 
 Um excelente exemplo deste tipo de estutura é o HTML. O HTML é composto por elementos (tags) que normalmente podem incluir outras
 tags dentro de si, e assim sucessivamente até que chegamos ao elemento mais interior que já não se divide mais.
 
-Para representar uma estrutura em árvore, vamos necessitar de agrupar os objectos simples e os objectos compostos de alguma forma,
+Para representar uma estrutura em árvore, vamos necessitar de agrupar os objectos simples (*leafs*) e os objectos compostos(*composites*) de alguma forma,
 e para isso recorremos a um interface ou classe abstracta que irá definir os métodos comuns que deverão ser implementados pelos
 objectos simples e pelos objectos complexos.
 
-Nessitaremos também de uma classe para representar os objectos simples (*leaf*) e outra para representar objectos complexos (*composites*)
+Nessitaremos também de uma classe para representar os objectos simples (*leaf*) e outra para representar objectos complexos (*composites*) que irão implmentar
+esse interface.
+
+Para este padrão apresenta-se dois exemplos.
+
+O Exemplo Composite one, tenta criar ums estrutura identica ao HTML. O exemplo composite two recria uma estrutura de uma empresa com
+diversos departamentos. Cada departamento terá um Manager e cada Manager terá os seus subordinados.
+No exemplo CompositeTWO, podemos observar que é possivel percorrer a árvore recursivamente.
 

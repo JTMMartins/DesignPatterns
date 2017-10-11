@@ -1,4 +1,4 @@
-package CompositePattern;
+package CompositePattern.CompositeDemoONE;
 
 import java.util.List;
 

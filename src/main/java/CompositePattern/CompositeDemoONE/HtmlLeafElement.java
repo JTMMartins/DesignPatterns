@@ -1,4 +1,4 @@
-package CompositePattern;
+package CompositePattern.CompositeDemoONE;
 
 public class HtmlLeafElement extends HtmlTag {
 

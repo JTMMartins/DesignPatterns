@@ -47,7 +47,8 @@ public class Manager implements Employee {
     //THIS WORKS BUT IS VERY BAD CODE
     //WE DONT WANT THIS.
     @Override
-    public Employee findByName(String name) {
+    @Deprecated
+    public Employee findByNameOLDVERSION(String name) {
         if (this.getName().equals(name)) return this;
         Employee found = null;
 
@@ -71,7 +72,7 @@ public class Manager implements Employee {
     }
 
     @Override
-    public Employee findByName2(String name) {
+    public Employee findByName(String name) {
 
         if (this.getName().equals(name)) return this;//if this is it...finish
 

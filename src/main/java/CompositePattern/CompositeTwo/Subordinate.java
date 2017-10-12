@@ -34,13 +34,13 @@ public class Subordinate implements Employee {
     }
 
     @Override
-    public Employee findByName(String name) {
+    public Employee findByNameOLDVERSION(String name) {
         System.out.println("in subordinate : " + this.getName());
         return this;
     }
 
     @Override
-    public Employee findByName2(String name) {
+    public Employee findByName(String name) {
         return this;
     }
 

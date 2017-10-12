@@ -1,7 +1,5 @@
 package CompositePattern.CompositeTwo;
 
-import java.util.Optional;
-
 public class App {
 
     public static void main(String[] args) {
@@ -29,10 +27,10 @@ public class App {
         CEO.add(headMarketing);
         CEO.add(headSales);
 
-        //Employee lookingfor = CEO.findByName("Romão");//O funcionário que estamos à procura.
+        //Employee lookingfor = CEO.findByNameOLDVERSION("Romão");//O funcionário que estamos à procura.
         //System.out.println("O funcionário " + lookingfor.getName() + " trabalha no dept " + lookingfor.getDept());
 
-        Employee lookingfor2 = CEO.findByName2("miguel");
+        Employee lookingfor2 = CEO.findByName("miguel");
         if (lookingfor2 != null) {
             System.out.println("O funcionário " + lookingfor2.getName() + " trabalha no dept " + lookingfor2.getDept());
         } else {

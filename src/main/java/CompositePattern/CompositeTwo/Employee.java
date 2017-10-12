@@ -17,9 +17,9 @@ public interface Employee {
 
     String getDept();
 
-    Employee findByName(String name);
+    Employee findByNameOLDVERSION(String name);
 
-    Employee findByName2(String name);
+    Employee findByName(String name);
 
 
 }

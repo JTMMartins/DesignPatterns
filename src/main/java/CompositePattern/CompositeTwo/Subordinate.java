@@ -1,8 +1,7 @@
 package CompositePattern.CompositeTwo;
 
-import java.util.Iterator;
 import java.util.List;
-import java.util.Optional;
+import java.util.stream.Stream;
 
 public class Subordinate implements Employee {
     private final String name;
@@ -11,6 +10,11 @@ public class Subordinate implements Employee {
     public Subordinate(String name, String dept) {
         this.name = name;
         this.dept = dept;
+    }
+
+    @Override
+    public Employee getEmployee() {
+        return this;
     }
 
     @Override

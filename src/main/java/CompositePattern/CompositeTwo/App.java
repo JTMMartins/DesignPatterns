@@ -32,8 +32,12 @@ public class App {
         //Employee lookingfor = CEO.findByName("Romão");//O funcionário que estamos à procura.
         //System.out.println("O funcionário " + lookingfor.getName() + " trabalha no dept " + lookingfor.getDept());
 
-        Employee lookingfor2 = CEO.findByName2("Pedro");
-        System.out.println("O funcionário " + lookingfor2.getName() + " trabalha no dept " + lookingfor2.getDept());
+        Employee lookingfor2 = CEO.findByName2("miguel");
+        if (lookingfor2 != null) {
+            System.out.println("O funcionário " + lookingfor2.getName() + " trabalha no dept " + lookingfor2.getDept());
+        } else {
+            System.out.println("Funcionário não existe na empresa");
+        }
     }
 
 }

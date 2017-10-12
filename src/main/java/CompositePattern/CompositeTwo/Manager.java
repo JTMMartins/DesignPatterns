@@ -1,10 +1,11 @@
 package CompositePattern.CompositeTwo;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.mapping;
+import static java.util.stream.Collectors.toList;
 
 public class Manager implements Employee {
     private final String name;
@@ -15,6 +16,11 @@ public class Manager implements Employee {
         this.name = name;
         this.dept = dept;
         subordinates = new ArrayList<>();
+    }
+
+    @Override
+    public Employee getEmployee() {
+        return this;
     }
 
     @Override
@@ -66,13 +72,20 @@ public class Manager implements Employee {
 
     @Override
     public Employee findByName2(String name) {
-        for (Employee sub : subordinates) {
-            System.out.println(sub.getName());
-            while (!sub.getName().equals(name)) {
-                return sub.findByName2(name);
+
+        if (this.getName().equals(name)) return this;//if this is it...finish
+
+        Employee employee = null;
+        for (Employee s : subordinates) {
+            if (s.getName().equals(name)) {
+                employee = s;
+                break;
             }
+            employee = s.getSubordinates().stream()
+                    .filter((emp -> emp.getName().equalsIgnoreCase(name))).findFirst().orElse(null);
+            if (employee != null) break;
         }
-        return null;
+        return employee;
     }
 
 

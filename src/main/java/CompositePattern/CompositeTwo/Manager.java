@@ -76,13 +76,18 @@ public class Manager implements Employee {
         if (this.getName().equals(name)) return this;//if this is it...finish
 
         Employee employee = null;
-        for (Employee s : subordinates) {
-            if (s.getName().equals(name)) {
-                employee = s;
+        for (Employee subordinate : subordinates) {
+
+            if (subordinate.getName().equals(name)) {
+                employee = subordinate;
                 break;
             }
-            employee = s.getSubordinates().stream()
-                    .filter((emp -> emp.getName().equalsIgnoreCase(name))).findFirst().orElse(null);
+
+            employee = subordinate.getSubordinates().stream()
+                    .filter((emp -> emp.getName().equalsIgnoreCase(name)))
+                    .findFirst()
+                    .orElse(null);
+
             if (employee != null) break;
         }
         return employee;

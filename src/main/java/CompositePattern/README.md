@@ -36,5 +36,5 @@ Para este padrão apresenta-se dois exemplos.
 O Exemplo Composite one, tenta criar ums estrutura identica ao HTML. O exemplo composite two recria uma estrutura de uma empresa com
 diversos departamentos. Cada departamento terá um Manager e cada Manager terá os seus subordinados.
 
-TODO : exemplo composite Two
+A FAZER : Modelo UML
 

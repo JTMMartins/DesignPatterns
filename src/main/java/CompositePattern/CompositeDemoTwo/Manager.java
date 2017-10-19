@@ -15,22 +15,22 @@ public class Manager implements Employee {
         this.dept = dept;
     }
 
-    public Employee search(Employee manager, String name) {
-        if (manager.getName().equals(name)) return manager;
+    public Employee search(Employee root, String name) {
+        if (root.getName().equals(name)) return root;
         EmployeeIteratorStack ManagerStack = new EmployeeIteratorStack();
-        if (!manager.getSubordinates().isEmpty()) {
-            Iterator<Employee> employeeIterator = manager.getSubordinates().iterator();
+        if (!root.getSubordinates().isEmpty()) {
+            Iterator<Employee> employeeIterator = root.getSubordinates().iterator();
             while (employeeIterator.hasNext()) {
                 Employee employee = employeeIterator.next();
                 ManagerStack.push(employee);
             }
         }
-        Employee resto = null;
+        Employee treeElement = null;
         while (ManagerStack.isEmpty() == false) {
-            resto = ManagerStack.pop();
-            return search(resto, name);
+            treeElement = ManagerStack.pop();
+            return search(treeElement, name);
         }
-        return null;
+        return null;//tem de ser melhorado. devolve null se não encontrado
     }
 
     @Override

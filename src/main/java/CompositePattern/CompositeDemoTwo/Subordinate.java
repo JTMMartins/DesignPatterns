@@ -25,17 +25,19 @@ public class Subordinate implements Employee {
 
     @Override
     public Employee add(Employee employee) {
+        //Não suportado em subordinados devido a ser Leaf
         throw new java.lang.UnsupportedOperationException("Not supported.");
     }
 
     @Override
     public Employee remove(Employee employee) {
+        //Não suportado em subordinados devido a ser Leaf
         throw new java.lang.UnsupportedOperationException("Not supported.");
     }
 
     @Override
     public List<Employee> getSubordinates() {
+        //Uma vez que um subordinate não possui subordinados, devolvemos uma lista vazia.
         return Collections.emptyList();
-        // throw new java.lang.UnsupportedOperationException("Not supported.");
     }
 }

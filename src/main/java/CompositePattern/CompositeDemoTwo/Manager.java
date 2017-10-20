@@ -15,22 +15,31 @@ public class Manager implements Employee {
         this.dept = dept;
     }
 
+    /*
+     * Pesquisa recursiva pela árvore
+     */
     public Employee search(Employee root, String name) {
         if (root.getName().equals(name)) return root;
+
         EmployeeIteratorStack ManagerStack = new EmployeeIteratorStack();
+
         if (!root.getSubordinates().isEmpty()) {
             Iterator<Employee> employeeIterator = root.getSubordinates().iterator();
             while (employeeIterator.hasNext()) {
+
                 Employee employee = employeeIterator.next();
-                ManagerStack.push(employee);
+                ManagerStack.push(employee);//uma vez que o elemento tem subordinados armazenamos na stack
             }
         }
+
         Employee treeElement = null;
+
         while (ManagerStack.isEmpty() == false) {
+
             treeElement = ManagerStack.pop();
-            return search(treeElement, name);
+            return search(treeElement, name);//chamada recursiva, usando um elemento retirado da stack
         }
-        return null;//tem de ser melhorado. devolve null se não encontrado
+        return null;//devolve null se não encontrado
     }
 
     @Override
